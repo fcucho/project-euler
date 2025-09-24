@@ -1,7 +1,13 @@
-package main 
+package main
 
-import fmt
+import "fmt"
 
 func main() {
-	fmt.Println("Hello world!")
+	total := 0
+	for num := range 1000 {
+		if num%3 == 0 || num%5 == 0 {
+			total += num
+		}
+	}
+	fmt.Println("hello", total)
 }
